@@ -1,0 +1,80 @@
+LINKED LISTS
+
+A linked list consists of a data element known as a node. Each node consists of two fields: one field has data, and the second field, the node has an address that keeps a reference to the next node.
+
+Node fields: 
+    Data - contain the value to be store in the node
+    Next - contains a reference to the next node on the list 
+
+A linked list is a collection of nodes. The first node is called the head. 
+The head is used as a starting point for any iteration through the list.
+The last node in the list must have its next reference pointing to None to determine the end of the list.
+
+EXAMPLE: 
+3(head) --> 1 --> 4 --> 10 --> None
+
+----------------------------------------------
+QUEUES or STACKS 
+
+queues and stacks differ only in the way the elements are retrieved: 
+
+    queue (FIFO) - uses First-in/First-out approach, meaning the first element inserted in the list is the first one to be retrieved.
+
+    EXAMPLE: 
+    10(front) --> 5 --> 2 --> 8 --> 1(rear)
+    index0        i1    i2    i3    i4
+
+    When you append new elements to the queue, they'll go to the read end. When you retrieve elements, they'll be taken from the front of the queue. 
+-------
+    stack (LIFO) - uses Last-In/First-Out approach, meaning that the last element inserted in the list is the first to be retrieved.
+
+    EXAMPLE: 
+    index3    10(top)
+    index2    5
+    index1    2
+    index0    8 
+    
+    In the above example, the first element inserted on the stack (index 0) is at the bottom, and the last element inserted is at the top. Since stacks use LIFO, the last element inserted (top) will be the first to be retrieved
+----------------------------------------------
+INSERTING and DELETING ELEMENTS
+
+In Python, you can INSERT elements into a list using .insert() or .append() 
+
+To REMOVE, you can use .remove() and .part()
+
+Key Differences between methods: 
+
+    .insert() and .remove() are used to add and delete elements at a **specific position** in the list 
+
+    .append() and .pop() are used to add and delete elements only at the **end of the list**
+----------------------------------------------
+
+ELEMENT RETRIEVAL 
+
+when it comes to element lookup, lists perform much better than linked list, because in a linked list you must traverse the whole list to find the element
+
+----------------------------------------------
+INTRODUCING collections.deque
+
+In Python, there's a specifc object in the collections module that you can use for linked list called deque (pronounced deck), which stands for doubled-ended queue
+
+collections.deque uses an implementation of a liked list in which you can access, insert, or remove elements from the beginning or end of a list with constant 0(1) performance.
+
+HOW TO USE collections.deque 
+
+First, you need to create a linked list. You can use the following piece of code to do that with deque: 
+    from collections import deque 
+    deque()
+
+The code above will create an empty linked list. If you want to populate it at creation, then you can give it an iterable as input:
+``` 
+    deque(['a', 'b', 'c'])
+    output: deque(['a', 'b', 'c'])
+
+    deque('abc')
+    output: deque(['a', 'b', 'c'])
+
+    deque([{'data': 'a'}, {'data': 'b'}])
+    output: deque([{'data': 'a'}, {'data': 'b'}])
+```
+
