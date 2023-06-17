@@ -1,9 +1,11 @@
 LINKED LISTS
 
-A linked list consists of a data element known as a node. Each node consists of two fields: one field has data, and the second field, the node has an address that keeps a reference to the next node.
+A linked list consists of a data element known as a node. Each node consists of two fields: one field has data, and the second field has an address that keeps a reference to the next node.
 
 Node fields: 
+
     Data - contain the value to be store in the node
+    
     Next - contains a reference to the next node on the list 
 
 A linked list is a collection of nodes. The first node is called the head. 
@@ -44,9 +46,9 @@ To REMOVE, you can use .remove() and .part()
 
 Key Differences between methods: 
 
-    .insert() and .remove() are used to add and delete elements at a **specific position** in the list 
+    .insert() and .remove() are used to add and delete elements at a SPECIFIC POSTION in the list 
 
-    .append() and .pop() are used to add and delete elements only at the **end of the list**
+    .append() and .pop() are used to add and delete elements only at the END OF THE LIST
 ----------------------------------------------
 
 ELEMENT RETRIEVAL 
@@ -62,7 +64,8 @@ collections.deque uses an implementation of a liked list in which you can access
 
 HOW TO USE collections.deque 
 
-First, you need to create a linked list. You can use the following piece of code to do that with deque: 
+First, you need to create a linked list. You can use the following piece of code to do that with deque:
+ 
     from collections import deque 
     deque()
 

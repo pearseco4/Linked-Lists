@@ -36,7 +36,7 @@ class LinkedList(object):
     def remove(self, d):
         # current node that we're looking at
         this_node = self.root
-        prev_node = Node
+        prev_node = None
         # use a while loop to iterate through the list
         while this_node: 
             # iterate through the list to find the node we're looking for 
