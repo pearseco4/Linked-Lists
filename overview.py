@@ -78,3 +78,5 @@ myList.add(12)
 myList.remove(8)
 print(myList.remove(12))
 print(myList.find(5))
+
+myList
